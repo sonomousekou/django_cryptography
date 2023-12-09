@@ -1,0 +1,21 @@
+<!-- create_config.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Config</title>
+</head>
+<body>
+    <h1>Create Config</h1>
+    <form method="post" action="{% url 'create_config' %}">
+        {% csrf_token %}
+        <label for="cle">Key:</label>
+        <input type="text" name="cle" required><br>
+        <label for="valuer">Value:</label>
+        <textarea name="valuer" required></textarea><br>
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>
